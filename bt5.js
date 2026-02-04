@@ -4,7 +4,7 @@ let books_category = [];
 let inventory_quantity = [];
 
 let total_input = prompt("Có bao nhiêu loại sách cần nhập thông tin hôm nay?");
-total_input = parseInt(total_input);
+total_input = Number(total_input);
 
 for (let i = 1; i <= total_input; i++) {
     let id = "";
@@ -17,14 +17,15 @@ for (let i = 1; i <= total_input; i++) {
                 break;
             }
         }
-        if (id !== "" && !is_duplicate) break;
+        if (id !== "" && is_duplicate === false) 
+            break;
         alert("Mã sách không được để trống và không được trùng lặp!");
     }
 
     let name = prompt("Nhập tên sách thứ " + i + ":");
     let category = prompt("Nhập các thể loại (cách nhau bởi dấu phẩy):");
     let qty = prompt("Nhập số lượng tồn kho:");
-    qty = parseInt(qty);
+    qty = Number(qty);
 
     books_id.push(id);
     books_name.push(name);
@@ -61,6 +62,6 @@ for (let i = 0; i < books_id.length; i++) {
 }
 
 console.log("Tổng số sách thuộc thể loại 'Lập trình': " + programming_count);
-console.log("Danh sách mã sách thuộc cả hai loại 'JavaScript' và 'Web':\n" + (js_web_ids || "Không có"));
+console.log("Danh sách mã sách thuộc cả hai loại 'JavaScript' và 'Web':" + (js_web_ids || "Không có"));
 console.log("Loại sách có số lượng tồn kho thấp nhất:");
 console.log("Mã sách: " + books_id[min_index] + ", Tên sách: " + books_name[min_index] + ", Tồn kho: " + inventory_quantity[min_index]);

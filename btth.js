@@ -2,14 +2,14 @@ let books = ["Nha Gia Kim", "Dac Nhan Tam", "Tuan Lam Viec 4 Gio"];
 let choice;
 
 do {
-    let menu = "--- THƯ VIỆN KHOA HỌC ---\n" +
-        "1. Xem danh sách\n" +
-        "2. Nhập sách mới\n" +
-        "3. Mượn sách (Xóa)\n" +
-        "4. Sửa tên sách\n" +
-        "5. Sắp xếp kệ\n" +
-        "0. Thoát\n" +
-        "Bạn chọn:";
+let menu = `--- THƯ VIỆN KHOA HỌC ---
+1. Xem danh sách
+2. Nhập sách mới
+3. Mượn sách (Xóa)
+4. Sửa tên sách
+5. Sắp xếp kệ
+0. Thoát
+Bạn chọn:`;
 
     choice = prompt(menu);
 
